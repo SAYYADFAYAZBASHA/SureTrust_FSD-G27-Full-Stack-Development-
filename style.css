@@ -16,10 +16,6 @@ body {
     transform: translateY(-0.25rem) scale(1.05);
     box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15), 0 3px 6px -1px rgba(0, 0, 0, 0.1);
     background-color: #474747;
-
-}
-.days:click{
-    background-color: #474747;
 }
 
 .day_count {
