@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks and Form</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav{
+           display: flex;
+           flex-direction: row;
+           align-items: center; 
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            background-color: #444;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        form {
+            margin: 20px auto;
+            width: 50%;
+            text-align: left;
+             border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        form div{
+            margin-bottom: 10px;
+        }
+        table {
+            margin: 20px auto;
+            width: 50%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        footer{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Information</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#students">Students</a></li>
+            <li><a href="#form">Form</a></li>
+            <li><a href="#media">Media</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="students">
+            <hr><h2>Student Marks</h2><hr>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Maths</th>
+                    <th>Science</th>
+                    <th>English</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>Raju</td>
+                    <td>85</td>
+                    <td>90</td>
+                    <td>78</td>
+                    <td>253</td>
+                </tr>
+                <tr>
+                    <td>Priya</td>
+                    <td>92</td>
+                    <td>88</td>
+                    <td>91</td>
+                    <td>271</td>
+                </tr>
+                <tr>
+                    <td>Kiran</td>
+                    <td>76</td>
+                    <td>80</td>
+                    <td>70</td>
+                    <td>226</td>
+                </tr>
+                <tr>
+                    <td>Sravani</td>
+                    <td>89</td>
+                    <td>94</td>
+                    <td>87</td>
+                    <td>270</td>
+                </tr>
+                 <tr>
+                    <td>David</td>
+                    <td>65</td>
+                    <td>70</td>
+                    <td>60</td>
+                    <td>195</td>
+                </tr>
+            </table>
+        </section>
+        <section id="form">
+            <hr>
+            <h2>Student Registration Form</h2>
+            <hr>
+            <form>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                <div>
+                    <label for="gender">Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div>
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                        <option value="canada">Canada</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="feedback">Feedback:</label>
+                    <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="media">
+            <h2>Embedded Media</h2>
+            <p>Here is a sample audio file:</p>
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+             <p>Here is a sample video file:</p>
+            <video controls width="320" height="240">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                Your browser does not support the video element.
+            </video>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Student Information Page</p>
+    </footer>
+</body>
+</html>
