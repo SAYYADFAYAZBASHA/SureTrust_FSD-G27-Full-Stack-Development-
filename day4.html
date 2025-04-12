@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive YouTube Player</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .responsive-iframe-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width) */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px; /* контейнера border-radius */
+        }
+
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Responsive YouTube Video</h1>
+        <div class="responsive-iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/d38gOQuJK1I?si=juidh9ghVsCXnENh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+        <div class="responsive-iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wJVq_6DkavM?si=VsYgVsbBjP0VLBv4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p style="text-align: center; margin-top: 10px;">This is a responsive YouTube video using iframe .</p>
+    </div>
+</body>
+</html>
