@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Practice</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .popup-message {
+            background-color: #e0f7fa;
+            border: 1px solid #b2ebf2;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Check the Console and Pop-ups!</h1>
+
+    <script>
+        let userName = "Alice";
+        let userAge = 30;
+        let isStudent = false;
+
+        const PI = 3.14159;
+        const gravity = 9.8;
+        const birthYear = 1995;
+
+        console.log("Type of userName:", typeof userName);
+        console.log("Type of userAge:", typeof userAge);
+        console.log("Type of isStudent:", typeof isStudent);
+        console.log("Type of PI:", typeof PI);
+        console.log("Type of gravity:", typeof gravity);
+        console.log("Type of birthYear:", typeof birthYear);
+        console.log("Type of null:", typeof null);
+        console.log("Type of undefined:", typeof undefined);
+        console.log("Type of an object:", typeof {name: 'Bob', age: 25});
+        console.log("Type of an array:", typeof [1, 2, 3]);
+
+        alert("Hello there! This is an alert message.");
+
+        let favoriteColor = prompt("What is your favorite color?");
+        console.log("User's favorite color:", favoriteColor);
+        if (favoriteColor) {
+            alert("Nice! " + favoriteColor + " is a lovely color.");
+        } else {
+            alert("You didn't enter a color.");
+        }
+
+        let wantsToContinue = confirm("Do you want to continue?");
+        console.log("User wants to continue:", wantsToContinue);
+        if (wantsToContinue) {
+            alert("Great! Let's carry on.");
+        } else {
+            alert("Okay, maybe next time!");
+        }
+    </script>
+</body>
+</html>
