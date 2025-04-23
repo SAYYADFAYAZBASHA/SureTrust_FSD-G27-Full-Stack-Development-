@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping Fun</title>
+</head>
+<body>
+    <h1>Check the Console!</h1>
+
+    <script>
+        console.log("Even numbers from 1 to 50:");
+        for (let i = 2; i <= 50; i += 2) {
+            console.log(i);
+        }
+
+        console.log("\nReversing digits of a number:");
+        let numToReverse = 123;
+        let reversedNum = 0;
+        let tempNum = numToReverse;
+        while (tempNum > 0) {
+            const lastDigit = tempNum % 10;
+            reversedNum = (reversedNum * 10) + lastDigit;
+            tempNum = Math.floor(tempNum / 10);
+        }
+        console.log(`Original number: ${numToReverse}`);
+        console.log(`Reversed number: ${reversedNum}`);
+
+        console.log("\nLooping over an array:");
+        const myArray = ["apple", "banana", "cherry", "date"];
+        for (let i = 0; i < myArray.length; i++) {
+            console.log(`Item at index ${i}: ${myArray[i]}`);
+        }
+
+        console.log("\nShowing properties of an object:");
+        const myObject = {
+            name: "John Doe",
+            age: 30,
+            city: "Visakhapatnam"
+        };
+        for (const property in myObject) {
+            console.log(`${property}: ${myObject[property]}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Grade & Logic</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; gap: 15px; background-color: #eee; margin: 20px; }
+        h2 { color: #333; }
+        .result { font-weight: bold; color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h2>Your Grade</h2>
+    <script>
+        let marks = parseInt(prompt("Enter marks (0-100):"));
+        let grade;
+
+        if (isNaN(marks) || marks < 0 || marks > 100) {
+            grade = "Invalid";
+            alert("Invalid marks!");
+        } else if (marks >= 90) grade = "A";
+        else if (marks >= 80) grade = "B";
+        else if (marks >= 70) grade = "C";
+        else if (marks >= 60) grade = "D";
+        else grade = "F";
+
+        alert("Grade: " + grade);
+        document.write(`<p>Grade: <span class='result'>${grade}</span></p>`);
+    </script>
+
+    <h2>Divisible by 3 & 5?</h2>
+    <script>
+        let num = parseInt(prompt("Enter a number:"));
+        let divMessage = "";
+
+        if (!isNaN(num)) {
+            const by5 = num % 5 === 0;
+            const by3 = num % 3 === 0;
+
+            if (by5 && by3) divMessage = `${num} is divisible by both.`;
+            else if (by5 || by3) divMessage = `${num} is divisible by 5 or 3.`;
+            else divMessage = `${num} is not divisible by 5 or 3.`;
+            alert(divMessage);
+            document.write(`<p>${divMessage}</p>`);
+        } else {
+            alert("Not a number!");
+            document.write(`<p class='error'>Invalid input.</p>`);
+        }
+    </script>
+
+    <h2>Login Check</h2>
+    <script>
+        let age = parseInt(prompt("Enter your age:"));
+        let loggedIn = confirm("Logged in?");
+        let premium = confirm("Premium?");
+
+        let ageInfo = !isNaN(age) ? (age >= 18 ? "Can vote." : "Cannot vote yet.") : "Invalid age.";
+        alert("Age info: " + ageInfo);
+        document.write(`<p>Age info: ${ageInfo}</p>`);
+
+        let loginStatus = loggedIn ? (premium ? "Premium access." : "Basic access.") : "Please log in.";
+        alert("Login status: " + loginStatus);
+        document.write(`<p>Login status: ${loginStatus}</p>`);
+    </script>
+</body>
+</html>

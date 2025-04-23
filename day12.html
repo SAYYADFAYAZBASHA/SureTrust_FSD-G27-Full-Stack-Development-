@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions, DOM, and Tasks</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: flex-start; gap: 15px; margin: 20px; }
+        h2 { color: #333; }
+        #studentListContainer ul { padding-left: 20px; }
+        #taskInputContainer input { padding: 8px; margin-right: 10px; }
+        #taskInputContainer button { padding: 8px 15px; cursor: pointer; }
+        #taskListContainer ul { padding-left: 20px; list-style-type: none; }
+        #taskListContainer li { padding: 5px 0; border-bottom: 1px solid #eee; }
+        #taskListContainer li:last-child { border-bottom: none; }
+    </style>
+</head>
+<body>
+    <h2>Find the Bigger Number</h2>
+    <script>
+        function findBigger(num1, num2) {
+            return num1 > num2 ? num1 : num2;
+        }
+
+        let number1 = 15;
+        let number2 = 25;
+        let biggerNumber = findBigger(number1, number2);
+        console.log(`The bigger number between ${number1} and ${number2} is: ${biggerNumber}`);
+        document.write(`<p>The bigger number between ${number1} and ${number2} is: <span style="font-weight: bold;">${biggerNumber}</span></p>`);
+    </script>
+
+    <h2>List of Students</h2>
+    <div id="studentListContainer">
+        <h3>Students:</h3>
+        <ul id="studentList"></ul>
+    </div>
+    <script>
+        const students = ["Alice", "Bob", "Charlie", "David", "Eve"];
+        const studentListElement = document.getElementById("studentList");
+
+        for (let i = 0; i < students.length; i++) {
+            const listItem = document.createElement("li");
+            listItem.textContent = students[i];
+            studentListElement.appendChild(listItem);
+        }
+    </script>
+
+    <h2>Simple Task Tracker</h2>
+    <div id="taskInputContainer">
+        <input type="text" id="newTask" placeholder="Add a new task">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+    <div id="taskListContainer">
+        <h3>Tasks:</h3>
+        <ul id="taskList"></ul>
+    </div>
+    <script>
+        const taskInput = document.getElementById("newTask");
+        const taskList = document.getElementById("taskList");
+        let tasks = [];
+
+        function addTask() {
+            const taskText = taskInput.value.trim();
+            if (taskText !== "") {
+                tasks.push(taskText);
+                renderTasks();
+                taskInput.value = "";
+            }
+        }
+
+        function renderTasks() {
+            taskList.innerHTML = "";
+            for (let i = 0; i < tasks.length; i++) {
+                const listItem = document.createElement("li");
+                listItem.textContent = tasks[i];
+                taskList.appendChild(listItem);
+            }
+        }
+
+        renderTasks();
+    </script>
+</body>
+</html>
